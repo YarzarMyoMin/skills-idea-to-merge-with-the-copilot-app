@@ -10,7 +10,7 @@ const { title = "Mona's Bookmark Manager" } = Astro.props;
   <form id="bookmark-form" on:submit>
     <div class="field">
       <label for="url">URL</label>
-      <input id="url" name="url" type="url" placeholder="example.com or https://example.com" required />
+      <input id="url" name="url" type="text" inputmode="url" autocomplete="off" placeholder="example.com or https://example.com" required />
     </div>
     <button type="submit">Add Bookmark</button>
   </form>
