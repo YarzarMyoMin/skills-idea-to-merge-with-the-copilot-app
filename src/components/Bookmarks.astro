@@ -10,7 +10,7 @@ const { title = "Mona's Bookmark Manager" } = Astro.props;
   <form id="bookmark-form" on:submit>
     <div class="field">
       <label for="url">URL</label>
-      <input id="url" name="url" type="url" placeholder="example.com or https://example.com" required />
+      <input id="url" name="url" type="text" inputmode="url" autocomplete="off" placeholder="example.com or https://example.com" required />
     </div>
     <button type="submit">Add Bookmark</button>
   </form>
@@ -28,7 +28,7 @@ const { title = "Mona's Bookmark Manager" } = Astro.props;
   <footer>Made with ♥ by Mona's Bookmark Manager</footer>
 
   <script type="module" client:load>
-    import { normalizeUrl, generateSlug, parseStoredBookmarks, formatBookmark } from '../lib/bookmarks.js';
+    import { normalizeUrl, generateSlug, parseStoredBookmarks, formatBookmark } from '/src/lib/bookmarks.js';
 
     const LS_KEY = 'mona-bookmarks';
     const form = document.getElementById('bookmark-form');
