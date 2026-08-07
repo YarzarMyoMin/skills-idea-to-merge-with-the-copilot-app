@@ -28,7 +28,7 @@ const { title = "Mona's Bookmark Manager" } = Astro.props;
   <footer>Made with ♥ by Mona's Bookmark Manager</footer>
 
   <script type="module" client:load>
-    import { normalizeUrl, generateSlug, parseStoredBookmarks, formatBookmark } from '../lib/bookmarks.js';
+    import { normalizeUrl, generateSlug, parseStoredBookmarks, formatBookmark } from '/src/lib/bookmarks.js';
 
     const LS_KEY = 'mona-bookmarks';
     const form = document.getElementById('bookmark-form');
